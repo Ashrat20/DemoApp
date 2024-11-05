@@ -1,0 +1,27 @@
+.below-section{
+    display: grid;
+    place-content: center;
+    height: 25rem;
+    background-color: rgb(7, 27, 44);
+    
+}
+
+.below-section .below-head{
+    padding-bottom: 2rem;
+    color: white;
+}
+
+.below-section input{
+    color: white;
+    background: none;
+    padding: 1rem;
+    border-color: rgb(69, 69, 160);
+    border-radius: 0.5rem;
+}
+
+.bottom-section{
+    background-color: rgb(238, 230, 230);
+    height: 9rem;
+    padding: 3rem;
+    
+}

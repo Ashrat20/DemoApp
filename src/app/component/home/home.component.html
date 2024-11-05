@@ -1,0 +1,103 @@
+<div class="top-section">
+    <nav class="navbar">
+        <div class="brand-name">
+            <h2>Demo app</h2>
+        </div>
+        <div class="list">
+            <ul>
+                <li><a routerLink="/" class="text-light txt">HOME</a></li>
+                <li>ABOUT US</li>
+                <li>JOBS</li>
+                <li>CLIENTS</li>
+                <li>EMLOPYERS</li>
+                <li>CONTACT US</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="top-mid-group">
+        <div class="heading">
+            <h1 class="sub-head text-light">l'm looking for..</h1>
+        </div>
+        <div class="form-element">
+            <input type="text" placeholder="Enter a job Description" />
+            <button type="button" class="btn btn-primary">Search</button>
+        </div>
+        <div class="bottom-element">
+            <input type="checkbox" name="" id="" class="check" /> Full Time
+            <input type="checkbox" name="" id="" class="text" /> Part time /Casual/Freelancer
+            <select name="select your location" id="location">
+                <option value="Select Your Location">Select Your Location</option>
+                <option value="Sion">Sion</option>
+                <option value="Andheri">Andheri</option>
+                <option value="Dadar">Dadar</option>
+            </select>
+        </div>
+        <div class="btn-bottom">
+            <button type="button" class="btn btn-primary" (click)="openModal()">Register</button>
+        </div>
+    </div>
+</div>
+<div class="custom-modal" *ngIf="isModalOpen">
+    <div class="modal-content">
+        <div class="modal-body">
+            <app-registrationform></app-registrationform>
+        </div>
+    </div>
+    <div class="modal-overlay"></div>
+</div>
+
+<div class="horizontal-bar">
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+</div>
+<section class="middle-section">
+    <h3 class="mid-head">We're Leaders in</h3>
+    <h1 class="mid-head-two">Creative Digital Recruitment</h1>
+    <div class="line bg-primary"></div>
+    <p>
+        Based in surry hills,the creative hub of sydney we are surrounded by
+        creativity<br />and that reflects on the type of jobs we recruit for.
+    </p>
+    <button type="button" class="btn btn-outline-primary">
+        FIND OUT MORE ABOUT US
+    </button>
+</section>
+<div class="horizontal-bar">
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+</div>
+<footer>
+    <section class="below-section">
+        <h4 class="below-head">Subcribe to our Job Seeker Mailing List</h4>
+        <input type="email" placeholder="Enter Your Email Address" />
+    </section>
+    <div class="horizontal-bar">
+        <div class="segment"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>
+    </div>
+    <section class="bottom-section">
+        <img src="" alt="" />
+        <p>Copright 2014 Two Bytes Consulting. <strong>Terms & policies</strong></p>
+    </section>
+</footer>

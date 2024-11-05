@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<div class="editprofilefrom">
+  <h2>Edit Profile</h2>
+  <form [formGroup]="editProfileForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="text" formControlName="firstname" placeholder="First Name" class="input-field" /><br>
+
+      <input type="text" formControlName="lastname" placeholder="Last Name" class="input-field" />
+      <div *ngIf="lastname?.invalid && (lastname?.dirty || lastname?.touched)" style="color: red;">
+        <div *ngIf="lastname?.errors?.['required']">please enter the first name</div>
+        <div *ngIf="lastname?.errors?.['pattern']">Character only allowed</div>
+      </div>
+    </div>
+    <div *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)" style="color: red;">
+      <div *ngIf="firstname?.errors?.['required']">please enter the first name</div>
+      <div *ngIf="firstname?.errors?.['pattern']">Character only allowed</div>
+    </div><br>
+
+    <div class="form-group">
+      <input type="email" formControlName="email" placeholder="Email" class="input-field" />
+
+    </div>
+    <div *ngIf="email?.invalid && email?.touched" style="color: red;">
+      Please enter a valid Email ID
+    </div>
+
+    <div class="form-group">
+      <input type="text" formControlName="phone" placeholder="(541) 754-3010" class="input-field" maxlength="10" />
+
+    </div>
+    <div *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)" class="error" style="color: red;">
+      <div *ngIf="phone?.errors?.['requried']">Please enter a valid Phone number</div>
+      <div *ngIf="phone?.errors?.['pattern']">only Numbers are allowed</div>
+    </div>
+
+    <div class="form-group">
+      <select formControlName="state" class="input-field">
+        <option value="Select State">Select State</option>
+        <option value="Maharastra">Maharastra</option>
+        <option value="Goa">Goa</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Gujrat">Gujrat</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <select formControlName="country" class="input-field">
+        <option value="Select Country">Select Country</option>
+        <option value="India">India</option>
+        <option value="America">America</option>
+        <option value="Germany">Germany</option>
+        <option value="Italy">Italy</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="text" formControlName="address" placeholder="Address" class="input-field" />
+    </div>
+    <div class="form-group-tags-container">
+      <input type="text" #tagInput placeholder="tags" class="input-field" (keydown)="onEnterTag($event, tagInput)" />
+      <div class="tags">
+        <span *ngFor="let tag of tagsArray.controls; let i = index" class="tag bg-dark text-light mx-1">
+          {{ tag.value }}&nbsp;
+          <span class="remove-tag bg-dark text-light" (click)="removeTag(i)">&times;</span>
+        </span>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+  </form>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,20 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: #29abe2;
+}
+.navbar .brand-name{
+    background-color: white;
+    color: black;
+}
+
+.list ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.list ul li{
+    margin: 5px;
+    padding: 20px;
+}

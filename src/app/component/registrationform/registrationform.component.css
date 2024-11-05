@@ -1,0 +1,88 @@
+
+.registration-modal {
+    position: fixed;
+    top: 0;
+    left: 27%;
+    background-color: white;
+    width: 45%;
+    height: 100%;
+    display: block;
+    overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1rem 0rem;
+}
+
+
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29abe2;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.registrationform {
+    display: flex;
+}
+
+.form-left {
+    width: 34%;
+    padding: 1.6rem;
+}
+.img-container a{
+     text-decoration: none;
+     font-size: 1.3rem;
+}
+.image-size{
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+}
+.form-right {
+    padding: 1rem;
+    width: auto;
+}
+
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: none;
+}
+
+#age {
+    width: 100%;
+}
+
+
+.form-group-buttons {
+    margin-left: 5rem;
+    padding: 2rem;
+}
+
+.form-group-buttons .btn {
+    margin-right: 0.4rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    font-weight: 500;
+}

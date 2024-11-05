@@ -1,0 +1,80 @@
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 1001;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    margin-top: 20px;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+
+
+
+.profile-section{
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+    width: 100%;
+}
+.profile-section .sub-section{
+    padding: 2rem;
+}
+.profile-section .picture-upload-box{
+    width: 13rem;
+    height: 13rem;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.img-place{
+    object-fit: cover;
+    width: 13rem;
+    height: 13rem;
+}
+
+.profile-section    .button-group{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    margin: 1rem 0.5rem 0rem 0rem;
+}
+
+.profile-section .left-section{
+    padding: 2rem;
+    margin-top: 4rem;
+}

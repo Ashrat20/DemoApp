@@ -1,0 +1,31 @@
+  <app-navbar></app-navbar>
+  <div *ngIf="user" class="profile-section">
+    <div class="sub-section">
+      <h1 class="text-primary">Profile</h1>
+      <div class="picture-upload-box">
+        <img *ngIf="user.image" [src]="user.image"  alt="" class="img-place">
+      </div>
+      <div class="button-group">
+        <button class="btn btn-warning" (click)="triggerFileInput()">Edit Photo</button>
+        <input type="file" id="photoinput"  (change)="onFileselect($event)"  style="display: none;"  accept="image/*">
+        <button class="btn btn-warning" (click)="editprofile()">Edit profile</button>
+      </div>
+      <small *ngIf="imageError" style="color: red;">{{imageError}}</small>
+    </div>
+    
+    <div class="left-section">
+      <p>
+        l'm {{user.firstname}} {{user.lastname}} and Im above {{user.age}} years and <br>
+        you can send your emails to <br>
+        <strong class="text-primary">{{user.email}}</strong>.I live in the state of {{user.state}}.I like to {{user.tags}}<br>
+        And Please send me send me newsletters.please <br>
+        reach out to me on {{user.phone}}.
+      </p>
+      <button class="btn btn-success"> I Agree</button>
+    </div>
+    <div class="update-form section">
+      <form></form>
+    </div>
+
+  </div>
+  <app-footer></app-footer>
