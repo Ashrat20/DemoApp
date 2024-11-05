@@ -45,8 +45,6 @@
 
       <div class="form-group">
         <input type="text" formControlName="phone" placeholder="(541) 754-3010" class="input-field" maxlength="10" />
-
-
       </div>
       <div *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)" class="error" style="color: red;">
         <div *ngIf="phone?.errors?.['required']">Please enter a valid Phone number</div>

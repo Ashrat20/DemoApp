@@ -72,7 +72,7 @@ export class RegistrationformComponent {
         image.src = e.target.result;
   
         image.onload = () => {
-          if (image.width == 310 && image.height == 325) {
+          if (image.width <= 310 && image.height <= 325) {
             this.imageError = ''; 
 
             this.registrationform.patchValue({

@@ -32,6 +32,18 @@
       <div *ngIf="phone?.errors?.['requried']">Please enter a valid Phone number</div>
       <div *ngIf="phone?.errors?.['pattern']">only Numbers are allowed</div>
     </div>
+    <div class="form-group">
+      <label for="age">Age</label><br>
+      <input type="range" formControlName="age" id="age" name="age" min="20" max="60" />
+      <div>
+        <!-- <span>20</span> -->
+
+        <!-- <span>60</span> -->
+      </div>
+
+      <br>
+      <span>{{ editProfileForm.get('age')?.value }}</span>
+    </div>
 
     <div class="form-group">
       <select formControlName="state" class="input-field">
