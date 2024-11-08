@@ -27,13 +27,13 @@ export class RegistrationformComponent {
     lastname: new FormControl('', [Validators.required, Validators.pattern("^[a-z A-Z]+$")]),
     email: new FormControl('', [Validators.required, Validators.email]),
     phone: new FormControl('', [Validators.required, Validators.pattern(/^\d{10}$/), Validators.maxLength(10)]),
-    age: new FormControl([20]),
+    age: new FormControl(20,[Validators.required,Validators.min(20),Validators.max(60)]),
     state: new FormControl('',[Validators.required]),
     country: new FormControl('',[Validators.required]),
     address: new FormControl(),
     image: new FormControl(null),
     tags: new FormArray([]),
-    subscribe: new FormControl([false])
+    subscribe: new FormControl(false)
   });
   get firstname() {
     return this.registrationform.get('firstname');
@@ -134,6 +134,16 @@ export class RegistrationformComponent {
     this.homeComponent.closeModal();
   }
 
+  resetForm(){
+    this.registrationform.reset({
+      'state': '',
+      'country': '',
+      'age' : 20
+    });
+    this.previewImage = null;
+    this.tagsArray.clear();
+  }
+
 
   onSubmit() {
     if (this.registrationform.valid) {
@@ -143,6 +153,8 @@ export class RegistrationformComponent {
       })
     }
   }
+
+
 
 }
 

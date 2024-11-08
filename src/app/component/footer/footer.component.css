@@ -1,17 +1,17 @@
-.below-section{
+.below-section {
     display: grid;
     place-content: center;
     height: 25rem;
     background-color: rgb(7, 27, 44);
-    
+
 }
 
-.below-section .below-head{
+.below-section .below-head {
     padding-bottom: 2rem;
     color: white;
 }
 
-.below-section input{
+.below-section input {
     color: white;
     background: none;
     padding: 1rem;
@@ -19,9 +19,31 @@
     border-radius: 0.5rem;
 }
 
-.bottom-section{
+.horizontal-bar {
+    display: flex;
+    width: 100%;
+    height: 10px;
+}
+
+.segment {
+    flex: 1;
+    height: 100%;
+}
+
+
+.segment:nth-child(odd) {
+    background-color: #a3d9f5;
+}
+
+.segment:nth-child(even) {
+    background-color: #7a8690;
+}
+
+
+
+.bottom-section {
     background-color: rgb(238, 230, 230);
     height: 9rem;
     padding: 3rem;
-    
+
 }
